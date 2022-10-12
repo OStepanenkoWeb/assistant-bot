@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+        werwerwerwer
        <NotificatorForm/>
     </div>
   );
