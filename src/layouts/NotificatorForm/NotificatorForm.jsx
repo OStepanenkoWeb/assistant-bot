@@ -1,16 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import BaseCheckbox from "../../components/CheckBox/BaseCheckbox/BaseCheckbox";
 import BaseSelect from "../../components/CheckBox/BaseSelect/BaseSelect";
 import {useTelegram} from "../../hooks/useTelegram";
 // import styles from './NotificatorForm.module.scss'
 
 const NotificatorForm = () => {
-    const {tg, user, onClose, onToggleMainButton} = useTelegram()
-
-    useEffect(() => {
-        tg.ready()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    const {user, onClose, onToggleMainButton} = useTelegram()
 
     return (
         <div>
