@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from './BaseSelect.module.scss'
+// import styles from './BaseSelect.module.scss'
 
 const BaseSelect = ({value, label, options, ...props}) => {
     const defaultValue = value ? value : ''
@@ -7,18 +7,17 @@ const BaseSelect = ({value, label, options, ...props}) => {
     const handlerSelect = ({target}) => setValue(target.value)
 
     return (
-        <div className={styles.selectWrapper}>
+        <div>
             <label>
                 <select
                     value={selectedValue}
                     onInput={() => setValue((prev) => !prev)}
                     onChange={handlerSelect}
                     {...props}
-                    className={styles.Select}
                 >
                     {options.map(({ value, label }) => <option value={value}>{label}</option>)}
                 </select>
-                <span className={styles.selectLabel}>{label}</span>
+                <span>{label}</span>
             </label>
         </div>
     );
